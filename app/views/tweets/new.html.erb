@@ -1,0 +1,7 @@
+<h1>New tweet</h1>
+
+<%= link_to "Add a comment", new_comment_path(:tweet_id=>@tweet.id) %>
+
+<%= render 'form' %>
+
+<%= link_to 'Back', tweets_path %>

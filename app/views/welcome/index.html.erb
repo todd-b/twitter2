@@ -1,0 +1,9 @@
+<h1>Welcome to TinyTwitter!<h1>
+
+<%if user_signed_in? %>
+<p>Hi there <%=current_user.email%>! We're glad you are back?</p>
+<p>Its time to add some more tweets: <%=link_to "Add a new tweet now", new_tweet_path %></p>
+<p>Here are your the most recent tweets:</p>
+
+
+<%end%>

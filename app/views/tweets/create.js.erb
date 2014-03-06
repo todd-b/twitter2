@@ -1,0 +1,2 @@
+$('#response_message').append('<h1>Thanks for your tweet:</h1> <b><%=@tweet.tweet_text%></b>');
+$('#recent_tweets').append('<%=@tweet.last(10)%>');
