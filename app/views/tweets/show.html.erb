@@ -13,7 +13,7 @@
 <p>
   <strong>Comments:</strong>
   <%if @num_comment != 0%>
-
+  <%= link_to "Add a comment", new_comment_path(:tweet_id=>@tweet.id) %>
 	<table>
   	  <thead>
     	<tr>

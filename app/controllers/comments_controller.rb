@@ -35,7 +35,7 @@ class CommentsController < ApplicationController
     @comment.user_id = current_user.id
 
     #update the number of comment for this tweet
-    set_num_comment (comment_params[:tweet_id])
+    
       # if a comment is saved set num_comments = 1
       # else num_comments is equal to 0
       # end
@@ -45,6 +45,7 @@ class CommentsController < ApplicationController
 
     respond_to do |format|
       if @comment.save
+        set_num_comment (comment_params[:tweet_id])
         format.html { redirect_to @comment, notice: 'Comment was successfully created.' }
         format.json { render action: 'show', status: :created, location: @comment }
         format.js      
