@@ -1,6 +1,6 @@
-<h1>Listing comments</h1>
+<h1>Comments</h1>
 
-<table>
+<table class="table table-striped">
   <thead>
     <tr>
       <th>Comment</th>
@@ -19,7 +19,6 @@
         <td><%= comment.comment %></td>
         <td><%= comment.user.email %></td>
         <td><%= comment.tweet.tweet %></td>
-        
         <td><%= link_to 'Show', comment %></td>
         <td><%= link_to 'Edit', edit_comment_path(comment) %></td>
         <td><%= link_to 'Destroy', comment, method: :delete, data: { confirm: 'Are you sure?' } %></td>

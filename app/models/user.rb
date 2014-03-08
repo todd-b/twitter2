@@ -6,5 +6,6 @@ class User < ActiveRecord::Base
   has_many :tweets
   has_many :comments
 
-  
+  include Gravtastic
+  gravtastic  
 end

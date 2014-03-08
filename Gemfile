@@ -23,7 +23,8 @@ group :development do
 end
 
 gem 'faker', '~> 1.2.0'
-# gem 'gravtastic'
+
+gem 'gravtastic'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby

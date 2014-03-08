@@ -8,7 +8,7 @@
 require 'faker'
 
 #create 50 users
-50.times do 
+10.times do 
   user = User.new(email: Faker::Internet.email, 
                   password: 'password')
   user.save
@@ -17,7 +17,7 @@ end
 #create 12 tweets per user
 users = User.all
 users.each do |user|
-  12.times do
+  6.times do
     tweet = Tweet.new(tweet: Faker::Lorem.words(30).join(" "),
                       user_id: user.id)
     tweet.save
