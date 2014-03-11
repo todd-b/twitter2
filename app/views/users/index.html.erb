@@ -1,9 +1,7 @@
-<h1>All Users</h1>
+<h1 class=text-center><%= image_tag("profile64.png", :alt => "profile icon") %>   All Users</h1>
 
+<% @users.each do |user| %>
 
-<%= @users.each do |user| 
+  <li class=text-center><%= mail_to user.email %> | <%= user.first_name %> <%= user.last_name %></li>
 
-
-
-end
-%>
+<% end %>

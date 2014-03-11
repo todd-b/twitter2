@@ -26,6 +26,8 @@ gem 'faker', '~> 1.2.0'
 
 gem 'gravtastic'
 
+#gem 'font-awesome-less'
+
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 

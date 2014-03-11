@@ -1,9 +1,38 @@
-<h1>Welcome to TinyTwitter!<h1>
 
-<%if user_signed_in? %>
-<p>Hi there <%=current_user.email%>! We're glad you are back?</p>
-<p>Its time to add some more tweets: <%=link_to "Add a new tweet now", new_tweet_path %></p>
-<p>Here are your the most recent tweets:</p>
+<div class="row-fluid">
+  <div class="span12 text-center">
+    <h1>Welcome to TinyTwitter!<h1>
+        <%if user_signed_in? %>
+        <p>Hi there <%=current_user.email%>...We're glad you're back. :)</p>
+        <p>I know you are ready. <%=link_to "It's time to add some more tweets.", new_tweet_path %></p>
+        <p>Don't be afraid to let the world know what you are up to.</p>
+        <p>You can check your profile to see your most recent tweets.</p>
+        <p>Have fun and tweet away!</p><br>
+        <%else%>
+        <p>Sign in now:</p>
+        <p><%= link_to "Sign In", sign_in %></p>
+        <%end%> 
+  </div>
+          
+      <div class="row">
+        <div class="col-md-4 text-center">
+          <%= link_to image_tag("tweet128.png", :alt => "tweet icon"), '/tweets' %>
+          <h3>Tweets</h3>
+          <p>tweet  [tweet]</p>
+          <p>noun 1. a weak chirping sound, as of a young or small bird. 2. Digital Technology . a very short message posted on the Twitter website: the message may include text, keywords, mentions of specific users, links to websites, and links to images or videos on a website. verb (used without object) 3. to make a weak chirping sound. 4. Digital Technology . to post a message on Twitter: She tweets a lot about movies.verb (used with object) 5. Digital Technology . to post (a message) on Twitter for (people) to read: He tweeted his fans after the event.</p>
+        </div>
+        <div class="col-md-4 text-center">
+          <%= link_to image_tag("comments128.png", :alt => "comment icon"), '/comments' %>
+          <h3>Comments</h3>
+          <p>com·ment  [kom-ent]</p>
+          <p>1. a remark, observation, or criticism: a comment about the weather. 2. gossip; talk: His frequent absences gave rise to comment. 3. a criticism or interpretation, often by implication or suggestion: The play is a comment on modern society. 4. a note in explanation, expansion, or criticism of a passage in a book, article, or the like; annotation. 5. explanatory or critical matter added to a text. </p>
+        </div>
+        <div class="col-md-4 text-center">
+          <%= image_tag("profile128.png", :alt => "profile icon") %>
+          <h3>Profiles</h3>
+          <p>pro·file  [proh-fahyl]</p>
+          <p>1. the outline or contour of the human face, especially the face viewed from one side. 2. a picture or representation of the side view of a head. 3. an outlined view, as of a city or mountain. 4. an outline of an object, as a molding, formed on a vertical plane passed through the object at right angles to one of its principal horizontal dimensions. 5. a drawing or the like representing this.</p>
+        </div>
+      </div>
 
 
-<%end%>
