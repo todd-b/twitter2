@@ -1,3 +1,5 @@
 <h1>Current User:</h1>
 
-<%= current_user.email %>
+</p><%= image_tag current_user.gravatar_url %>   <%= current_user.first_name %><%= current_user.last_name %> | <%= current_user.email %></p>
+<%= current_user.tweets %>
+

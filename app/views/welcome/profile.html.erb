@@ -1,2 +1,16 @@
-<h1>Welcome#profile</h1>
-<p>Find me in app/views/welcome/profile.html.erb</p>
+<div>
+    <div><h4>Recent Tweets...</h4></div>
+    <% @last10.each do |tweet| %>
+      <table class="table table-bordered table-striped">
+        <tr>
+          <td><%= tweet.tweet %></td>
+        </tr>
+        <tr>
+          <td><%= tweet.num_comment %> <%= link_to "comments...", tweet %>
+          </td>
+        </tr>
+      </table>
+    <% end %>
+  </div>
+
+</div>

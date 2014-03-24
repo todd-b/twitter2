@@ -10,7 +10,7 @@ Twitter2::Application.routes.draw do
 
   resources :users
 
-  get 'users/:id' => 'users#show'
+  # get 'users/:id' => 'users#show'
 
   root "welcome#index"
   
